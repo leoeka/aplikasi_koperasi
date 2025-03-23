@@ -21,10 +21,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Koperasi Simpan Pinjam',
       theme: ThemeData(
-        primaryColor: Colors.red,
-        scaffoldBackgroundColor: Colors.white,
+        primaryColor: Colors.green.shade800, // Warna hijau koperasi utama
+        scaffoldBackgroundColor: Colors.green.shade50, // Latar belakang hijau muda
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.green.shade800,
           foregroundColor: Colors.white,
           centerTitle: true,
           titleTextStyle: TextStyle(
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red,
+            backgroundColor: Colors.green.shade700,
             foregroundColor: Colors.white,
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
             textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -45,14 +45,14 @@ class MyApp extends StatelessWidget {
         ),
         cardTheme: CardTheme(
           color: Colors.white,
-          shadowColor: Colors.black26,
+          shadowColor: Colors.green.shade200,
           elevation: 4,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
         ),
         listTileTheme: ListTileThemeData(
-          iconColor: Colors.red,
+          iconColor: Colors.green.shade800,
           textColor: Colors.black87,
         ),
       ),
@@ -109,21 +109,21 @@ class DashboardScreen extends StatelessWidget {
               },
               child: Card(
                 elevation: 5,
-                shadowColor: Colors.redAccent,
+                shadowColor: Colors.green.shade400,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(features[index]['icon'], size: 50, color: Colors.red),
+                    Icon(features[index]['icon'], size: 50, color: Colors.green.shade700),
                     SizedBox(height: 10),
                     Text(
                       features[index]['title'],
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: Colors.green.shade900,
                       ),
                     ),
                   ],

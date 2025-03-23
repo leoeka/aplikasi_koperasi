@@ -14,37 +14,39 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Center(
+      backgroundColor: Colors.green.shade50, // Latar belakang hijau terang
+      body: Center(
+        child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(16.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 50),
-                Image.asset('assets/register.png', height: 100), // Ilustrasi registrasi
+                Image.asset('assets/register.png', height: 200), 
                 SizedBox(height: 20),
                 Card(
                   elevation: 5,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
+                  color: Colors.white,
                   child: Padding(
                     padding: EdgeInsets.all(20),
                     child: Form(
                       key: _formKey,
                       child: Column(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            'Buat Akun Baru',
-                            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                            'Buat Akun Koperasi',
+                            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.green.shade900),
                           ),
                           SizedBox(height: 10),
                           TextFormField(
                             controller: _nameController,
                             decoration: InputDecoration(
-                              labelText: 'Nama',
-                              prefixIcon: Icon(Icons.person),
+                              labelText: 'Nama Lengkap',
+                              prefixIcon: Icon(Icons.person, color: Colors.green.shade900),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -61,7 +63,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             controller: _emailController,
                             decoration: InputDecoration(
                               labelText: 'Email',
-                              prefixIcon: Icon(Icons.email),
+                              prefixIcon: Icon(Icons.email, color: Colors.green.shade900),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -79,7 +81,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             controller: _passwordController,
                             decoration: InputDecoration(
                               labelText: 'Password',
-                              prefixIcon: Icon(Icons.lock),
+                              prefixIcon: Icon(Icons.lock, color: Colors.green.shade900),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -103,7 +105,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               }
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.red,
+                              backgroundColor: Colors.green.shade700,
                               foregroundColor: Colors.white,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
@@ -119,7 +121,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             },
                             child: Text(
                               'Sudah punya akun? Login',
-                              style: TextStyle(color: Colors.red),
+                              style: TextStyle(color: Colors.green.shade700),
                             ),
                           ),
                         ],
