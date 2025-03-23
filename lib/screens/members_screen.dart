@@ -6,24 +6,24 @@ class MembersScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Daftar Anggota', style: TextStyle(fontWeight: FontWeight.bold)),
-        elevation: 4, // Bayangan untuk memberi efek depth
+        elevation: 4, 
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: ListView.builder(
-          itemCount: 10, // Ganti dengan jumlah anggota sebenarnya
+          itemCount: 10, 
           itemBuilder: (context, index) {
             return Card(
               margin: EdgeInsets.symmetric(vertical: 8),
-              elevation: 4, // Memberikan efek shadow agar tampak modern
+              elevation: 4, 
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12), // Membuat card lebih melengkung
+                borderRadius: BorderRadius.circular(12), 
               ),
               child: ListTile(
                 leading: CircleAvatar(
                   backgroundColor: Colors.green.shade700,
                   foregroundColor: Colors.white,
-                  child: Icon(Icons.person, size: 28), // Ganti angka dengan ikon user
+                  child: Icon(Icons.person, size: 28), 
                 ),
                 title: Text(
                   'Anggota ${index + 1}',
@@ -42,13 +42,13 @@ class MembersScreen extends StatelessWidget {
                     IconButton(
                       icon: Icon(Icons.edit, color: Colors.blue),
                       onPressed: () {
-                        // Aksi edit anggota
+                        
                       },
                     ),
                     IconButton(
                       icon: Icon(Icons.delete, color: Colors.red),
                       onPressed: () {
-                        // Aksi hapus anggota
+                        
                       },
                     ),
                   ],
